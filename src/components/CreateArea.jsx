@@ -49,7 +49,7 @@ function CreateArea(props) {
   // 5 apply Add feature
   return (
     <div>
-      <form className="create-note" action="/" method="post">
+      <form className="create-note">
         {isExpanded && (
           <input
             name="title"

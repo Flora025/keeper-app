@@ -17,7 +17,7 @@ const NoteItemRoute = require('./routes/noteItem');
 
 // connect to mongodb ..
 mongoose
-  .connect(process.env.DB_CONNECT)
+  .connect('mongodb://localhost:27017/')
   .then(() => console.log('Database connected'))
   .catch((err) => console.log(err));
 

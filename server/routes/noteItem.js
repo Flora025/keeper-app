@@ -5,6 +5,7 @@ const noteItemModel = require('../models/noteItem');
 // add note Item to database
 router.post('/api/item', async (req, res) => {
   try {
+    console.log('server');
     const newItem = new noteItemModel({
       title: req.body.title,
       content: req.body.content
