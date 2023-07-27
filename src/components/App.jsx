@@ -15,8 +15,11 @@ function App() {
     setNotes((prevNotes) => {
       return [...prevNotes, newNote];
     });
-    const res = await axios.post('http://localhost:3000/api/item', newNote);
-    console.log('addNote fin');
+    const res = await axios.post('/api/item', {
+      title: newNote.title,
+      content: newNote.content
+    });
+    console.log('addNote completed');
   };
 
   // delete item when click on delete

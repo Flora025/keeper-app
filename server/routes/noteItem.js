@@ -2,10 +2,11 @@ const router = require('express').Router();
 // import todo model
 const noteItemModel = require('../models/noteItem');
 
+router.get('/', function (req, res) {});
+
 // add note Item to database
 router.post('/api/item', async (req, res) => {
   try {
-    console.log('server');
     const newItem = new noteItemModel({
       title: req.body.title,
       content: req.body.content
@@ -13,6 +14,7 @@ router.post('/api/item', async (req, res) => {
     // save this item to database
     const saveItem = await newItem.save();
     res.status(200).json(saveItem);
+    console.log('Saved to database');
   } catch (err) {
     res.json(err);
   }
