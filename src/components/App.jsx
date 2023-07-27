@@ -4,6 +4,8 @@ import Footer from './Footer';
 import Note from './Note';
 import CreateArea from './CreateArea';
 import axios from 'axios';
+import { API } from 'aws-amplify';
+import { addNote } from '../graphql/mutations';
 
 function App() {
   // create an array of notes
@@ -19,6 +21,7 @@ function App() {
       title: newNote.title,
       content: newNote.content
     });
+    graphql;
     console.log('addNote completed');
   };
 

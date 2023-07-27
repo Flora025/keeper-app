@@ -16,7 +16,7 @@ const PORT = 3000;
 app.use(cors());
 
 // import routes
-const NoteItemRoute = require('./routes/noteItem');
+const NoteItemRoute = require('./routes/noteItem').default;
 
 // connect to mongodb ..
 mongoose
