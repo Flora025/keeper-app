@@ -15,7 +15,7 @@ server/node_modules
 /build
 
 # misc
-pw.md
+*.md
 .DS_Store
 .env.local
 .env.development.local
